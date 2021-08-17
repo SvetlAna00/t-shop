@@ -1,0 +1,16 @@
+/* menu_catalog */
+
+.menu_catalog {
+    grid-template-areas: 
+    "first second"
+    "third third";
+}
+.skateboards {
+    grid-area: first;
+}
+.decks {
+    grid-area: second;
+}
+.sale {
+    grid-area: third;
+}

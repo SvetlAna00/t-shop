@@ -1,0 +1,11 @@
+/* menu_catalog */
+.menu_catalog {
+    grid-template-areas: 
+    "first second";
+}
+.wheels {
+    grid-area: first;
+}
+.bearings {
+    grid-area: second;
+}

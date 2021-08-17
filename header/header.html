@@ -1,0 +1,77 @@
+<header id="header" class="header">
+    <a href="#">
+        <img class="header_logo" src="../../header/assets/img/logo_header.svg" alt="t-shop">
+    </a>
+
+    <div class="header_menu">
+        <a href="#" class="header_menu_item">Одежда</a>
+        <a href="#" class="header_menu_item">Обувь</a>
+        <a href="#" class="header_menu_item">Скейты</a>
+        <a href="#" class="header_menu_item">Стафф</a>
+    </div> <!-- header_menu -->
+
+    <div class="header_telephone">
+        <img class="header_telephone_img" src="../../header/assets/img/telephone_header.svg" alt="Telephone">
+        <a class="header_telephone_number" href="tel:88002004555">
+            8 800 200 45 55
+        </a>
+    </div> <!-- header_telephone -->
+
+    <div class="header_icons">
+        <ul>
+            <li class="header_icon_item">
+                <form class="search_form" action="" role="search" method="GET">
+                    <button>
+                        <img class="search_img" src="../../header/assets/img/search_img.svg">
+                    </button>
+                    <input type="text" name="search" class="search_input" id="search_input">
+                </form>
+
+            </li>
+
+            <li class="header_icon_item">
+                <div class="modal_item_favourite">
+                    <a id="favourite_icon" href="#">
+                        <img src="../../header/assets/img/favourite.svg" alt="favourite">
+                    </a>
+                    <div id="modal_window_favourite" class="modal_window_favourite">
+
+                        <div id="count_favorite" class="count_favorite">0</div>
+                        <div class="text_favorite">Товаров</div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="header_icon_item">
+                <div class="modal_item">
+                    <a id="profile_icon" href="#">
+                        <img src="../../header/assets/img/profile.svg" alt="profile">
+                    </a>
+                    <div id="modal_window" class="modal_window">
+
+                        <form action="login.php" method="POST">
+                            <input id="login_email" class="modal_window_login" type="text" placeholder="Логин">
+
+                            <input id="login_pass" class="modal_window_password" type="password"
+                                placeholder="Пароль">
+
+                            <div class="remember_me">
+                                <label class="remember_me_text" for="remember_me_checkbox">Запомнить меня</label>
+                                <input id="remember_me_checkbox" class="remember_me_checkbox" type="checkbox">
+                            </div>
+
+                            <button id="btn_login" class="btn_login">Войти</button>
+                        </form>
+
+                    </div>
+                </div>
+            </li>
+
+            <li class="header_icon_item">
+                <a href="#">
+                    <img src="../../header/assets/img/cart.svg" alt="cart">
+                </a>
+            </li>
+        </ul>
+    </div> <!-- header_icons -->
+</header>

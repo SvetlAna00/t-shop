@@ -1,0 +1,114 @@
+.footer {
+    width: 100%;
+    padding: 20px 0 40px;
+    background-color: #262626;
+    text-align: center;
+    font-size: 20px;
+    line-height: 29px;
+}
+.footer_content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 40px;
+    color: #fff;
+}
+
+/* footerItem 1 */
+
+/* footer_subscribe */
+.footer_subscribe {
+    position: relative;
+    text-align: left;
+}
+.footer_subscribe_text {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+
+    font-size: 20px;
+    line-height: 29px;
+}
+.footer_form_input {
+    font-size: 14px;
+    line-height: 20px;
+    min-width: 261px;
+    width: 100%;
+    position: relative;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    overflow: hidden;
+    outline: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+}
+.footer_form_btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+}
+/* footer_telephone */
+.footer_telephone {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    padding-top: 30px;
+}
+.footer_telephone_number {
+    margin-left: 22px;
+    font-size: 25px;
+    line-height: 36px;
+}
+
+/* footerItem 2 */
+
+/* footer_social */
+.footer_social {
+    margin-top: 45px;
+}
+.footer_social_item {
+    margin-right: 45px;
+}
+.footer_social_item:last-child {
+    margin-right: 0;
+}
+/* footer_menu */
+.footer_menu {
+    justify-content: center;
+}
+.footer_menu_item {
+    margin-right: 30px;
+}
+.footer_menu_item:last-child {
+    margin-right: 0;
+}
+
+/* footerItem 3 */
+
+.footer_privacy_policy,
+.footer_ofetra {
+    text-align: left;
+    margin-bottom: 15px;
+}
+/* footer_cards */
+.footer_cards {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.footer_card{
+    margin-right: 10px;
+}
+.footer_card:last-child{
+    margin-right: 0;
+}
