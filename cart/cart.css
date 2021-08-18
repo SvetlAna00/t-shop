@@ -142,3 +142,21 @@ td .product_color {
     font-size: 20px;
     line-height: 29px;
 }
+
+.btn {
+    position: relative;
+    width: 65px;
+    height: 40px;
+    border: 1px solid #3e3e3e;
+    border-radius: 50px;
+}
+.btn_circle {
+    position: absolute;
+    top: 5px;
+    width: 32px;
+    height: 30px;
+    background: #D7D7D7;
+    border-radius: 150px;
+
+    cursor: pointer;
+}
