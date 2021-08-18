@@ -12,7 +12,7 @@ header {
     z-index: 999;
     background-color: #fff;
 
-    border-bottom: 2px solid rgb(240, 182, 67, 0.5);
+    border-bottom: 2px solid rgba(240, 182, 67, 0.5);
 }
 header.hide {
     top: -100%;
