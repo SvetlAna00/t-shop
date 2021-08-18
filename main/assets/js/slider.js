@@ -82,6 +82,7 @@ let updateSaleSlidePosition = () => {
         nextSaleArrow.style.display = '';
     }
 }
+
 // newxtSale
 let showNextSaleSlide = () => {
     i++;
@@ -95,6 +96,7 @@ let showPrevSaleSlide = () => {
     updateSaleSlidePosition();
 }
 
+setInterval(showNextSaleSlide(), 5000);
 
 nextSaleArrow.addEventListener("click", showNextSaleSlide);
 prevSaleArrow.addEventListener("click", showPrevSaleSlide);
