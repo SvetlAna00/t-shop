@@ -28,6 +28,7 @@
     right: 0;
     width: 23px;
     height: 19px;
+    cursor: pointer;
 }
 .product_img {
     position: relative;
@@ -67,17 +68,77 @@ td .product_title {
 td .product_vendor_code {
     font-size: 16px;
     line-height: 20px;
-}
-.product_characteristics .product_size,
-.product_characteristics .product_color {
-    display: block;
 
-    font-size: 16px;
-    line-height: 20px;
-    padding: 2px 16px;
+    margin-top: 10px;
+}
+td .product_size,
+td .product_color {
+    max-width: 51px;
+    max-height: 24px;
+
     border: 1px solid #3e3e3e;
     border-radius: 5px;
 
-    text-transform: uppercase;
     text-align: center;
+}
+td .product_size {
+    padding: 2px 16px;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+td .product_color {
+    padding: 2px 13px;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: capitalize;
+}
+
+.number_of_product {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.number_product {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 2px 8px;
+    border: 1px solid #3e3e3e;
+    border-radius: 5px;
+    text-align: center;
+}
+.reduce_number_product,
+.add_number_product {
+    max-width: 17px;
+    cursor: pointer;
+}
+.product_coin {
+    display: block;
+    width: max-content;
+
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 58px;
+
+    text-transform: capitalize;
+}
+/* card_coin */
+.card_coin {
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+}
+.card_coin_value {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 58px;
+
+    text-transform: uppercase;
+}
+.card_coin_currency {
+    margin-left: 15px;
+    text-transform: capitalize;
+    font-size: 20px;
+    line-height: 29px;
 }
