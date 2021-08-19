@@ -1,15 +1,11 @@
 /* menu_catalog */
 .menu_catalog {
     grid-template-areas: 
-    "first second"
-    "third third";
+    "first second";
 }
-.skateboards {
+.wheels {
     grid-area: first;
 }
-.decks {
+.bearings {
     grid-area: second;
-}
-.sale {
-    grid-area: third;
 }

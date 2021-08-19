@@ -86,7 +86,7 @@ let updateSaleSlidePosition = () => {
 // newxtSale
 let showNextSaleSlide = () => {
     i++;
-    if (i < saleSlidesNum){
+    if (i < saleSlidesNum) {
         updateSaleSlidePosition();
     }
 }
@@ -141,3 +141,48 @@ let showPrevNewsSlide = () => {
 
 nextNewsArrow.addEventListener("click", showNextNewsSlide);
 prevNewsArrow.addEventListener("click", showPrevNewsSlide);
+// _______________________________________________________________
+// _______________________________________________________________
+// BRENDS SLIDER
+
+let brendList = document.querySelector('.brends_content');
+
+let prevBrendArrow = document.querySelector('.brends_prev_arrow');
+let nextBrendArrow = document.querySelector('.brends_next_arrow');
+
+let jump = 1;
+let pos = 0;
+
+window.setInterval(() => {
+    pos += jump;
+    if (pos > 300 || pos < -150) {
+        jump *= (-1);
+    }
+    console.log(pos)
+    brendList.style.right = pos + 'px';
+}, 100);
+
+let showPrevBrend = () => {
+    window.setInterval(() => {
+        pos += jump;
+        if (pos > 300 || pos < -150) {
+            jump *= (-1);
+        }
+        console.log(pos)
+        brendList.style.right = pos + 'px';
+    }, 1000);
+}
+
+let showNextBrend = () => {
+    window.setInterval(() => {
+        pos += jump;
+        if (pos > 300 || pos < -150) {
+            jump *= (-1);
+        }
+        console.log(pos)
+        brendList.style.right = pos + 'px';
+    }, 10);
+}
+
+prevBrendArrow.addEventListener("click", showPrevBrend);
+nextBrendArrow.addEventListener("click", showNextBrend);

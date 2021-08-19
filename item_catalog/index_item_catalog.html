@@ -59,8 +59,8 @@
                         </a>
                         <div id="modal_window_favourite" class="modal_window_favourite">
 
-                            <div id="count_favorite" class="count_favorite">0</div>
-                            <div class="text_favorite">Товаров</div>
+                            <div id="count_favorite" class="count_favorite"></div>
+                            <div id="text_favorite" class="text_favorite"></div>
                         </div>
                     </div>
                 </li>
@@ -146,9 +146,6 @@
                                     <img src="assets/img/big_photo3.jpg" alt="photo_big">
                                 </div>
 
-                                <div class="card_favorite_big_photo">
-                                    <img src="assets/img/favorite.svg" alt="btn_add_to_favorite">
-                                </div>
                             </div> <!-- photo_big_slider -->
 
 
@@ -201,17 +198,17 @@
                                 </div> <!-- card_select_colors -->
                             </div> <!-- card_colors -->
 
-                            <div class="card_coin">
-                                <div class="card_coin_value">5890</div>
-                                <div class="card_coin_currency">руб</div>
+                            <div class="total_coin">
+                                <div class="total_coin_value">5890</div>
+                                <div class="total_coin_currency">руб</div>
                             </div>
 
                             <div class="card_buy">
-                                <button class="btn_add_to_cart">купить</button>
+                                <button class="btn_yellow btn_add_to_cart">купить</button>
                             </div>
 
                             <div class="card_favorite">
-                                <button class="btn_add_to_favorite">в избранное</button>
+                                <button id="btn_favorite" class="btn_add_to_favorite">в избранное</button>
                             </div>
 
                         </div> <!-- item_card_buy -->
@@ -345,6 +342,7 @@
 
 
     <script type="text/javascript" src="../main_assets/main_js/header.js"></script>
+    <script type="text/javascript" src="../main_assets/main_js/favorite.js"></script>
     <script type="text/javascript" src="../main_assets/main_js/login.js"></script>
     <script type="text/javascript" src="../main_assets/main_js/modalWindow.js"></script>
     <script type="text/javascript" src="photoSlider.js"></script>

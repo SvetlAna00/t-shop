@@ -6,14 +6,10 @@
     display: grid;
     grid-gap: 25px;
 }
-
 .menu_catalog_item {
     text-transform: uppercase;
     color: #fff;
 }
-/* .menu_catalog_item a:hover .menu_catalog_item_more {
-    text-decoration: underline;
-} */
 .menu_catalog_item a:hover .menu_catalog_item_content::before{
     opacity: 0;
 }
