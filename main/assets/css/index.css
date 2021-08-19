@@ -212,6 +212,7 @@
 }
 
 .catalogPanel {
+  width: 100%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
@@ -225,6 +226,7 @@
 }
 
 .catalogPanel .menu_catalog_item {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

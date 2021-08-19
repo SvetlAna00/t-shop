@@ -13,9 +13,10 @@ header {
     background-color: #fff;
 
     border-bottom: 2px solid rgba(240, 182, 67, 0.5);
+    transition: all 0.16s ease-in-out;
 }
 header.hide {
-    top: -100%;
+    transform: translateY(-100%);
 }
 .header_menu {
     justify-content: center;
