@@ -47,6 +47,7 @@ let placeAnOrder = () => {
     }
     else {
         updateTotalCoin();
+        document.location.href = "https://svetlana00.github.io/t-shop/thanks/";
     }
 }
 btnPlaceAnOrder.addEventListener("click", placeAnOrder)
