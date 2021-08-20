@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="rus">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../main_assets/main_css/normalize.css">
+    <link rel="stylesheet" href="../../header/assets/css/style.css">
+    <link rel="stylesheet" href="../../footer/assets/css/style.css">
+    <link rel="stylesheet" href="../menu_catalog.css">
+    <link rel="stylesheet" href="assets/css/staff.css">
+    <link rel="stylesheet" href="../../main_assets/main_css/main.css">
+    <title>T-SHOP</title>
+</head>
+
+<body>
+    <header id="header" class="header">
+        <a href="#">
+            <img class="header_logo" src="../../header/assets/img/logo_header.svg" alt="t-shop">
+        </a>
+
+        <div class="header_menu">
+            <a href="#" class="header_menu_item">Одежда</a>
+            <a href="#" class="header_menu_item">Обувь</a>
+            <a href="#" class="header_menu_item">Скейты</a>
+            <a href="#" class="header_menu_item">Стафф</a>
+        </div> <!-- header_menu -->
+
+        <div class="header_telephone">
+            <img class="header_telephone_img" src="../../header/assets/img/telephone_header.svg" alt="Telephone">
+            <a class="header_telephone_number" href="tel:88002004555">
+                8 800 200 45 55
+            </a>
+        </div> <!-- header_telephone -->
+
+        <div class="header_icons">
+            <ul>
+                <li class="header_icon_item">
+                    <form class="search_form" action="" role="search" method="GET">
+                        <button>
+                            <img class="search_img" src="../../header/assets/img/search_img.svg">
+                        </button>
+                        <input type="text" name="search" class="search_input" id="search_input">
+                    </form>
+
+                </li>
+
+                <li class="header_icon_item">
+                    <div class="modal_item_favourite">
+                        <a id="favourite_icon" href="#">
+                            <img src="../../header/assets/img/favourite.svg" alt="favourite">
+                        </a>
+                        <div id="modal_window_favourite" class="modal_window_favourite">
+
+                            <div id="count_favorite" class="count_favorite">0</div>
+                            <div class="text_favorite">Товаров</div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="header_icon_item">
+                    <div class="modal_item">
+                        <a id="profile_icon" href="#">
+                            <img src="../../header/assets/img/profile.svg" alt="profile">
+                        </a>
+                        <div id="modal_window" class="modal_window">
+
+                            <form action="login.php" method="POST">
+                                <input id="login_email" class="modal_window_login" type="text" placeholder="Логин">
+
+                                <input id="login_pass" class="modal_window_password" type="password"
+                                    placeholder="Пароль">
+
+                                <div class="remember_me">
+                                    <label class="remember_me_text" for="remember_me_checkbox">Запомнить меня</label>
+                                    <input id="remember_me_checkbox" class="remember_me_checkbox" type="checkbox">
+                                </div>
+
+                                <button id="btn_login" class="btn_login">Войти</button>
+                            </form>
+
+                        </div>
+                    </div>
+                </li>
+
+                <li class="header_icon_item">
+                    <a href="#">
+                        <img src="../../header/assets/img/cart.svg" alt="cart">
+                    </a>
+                </li>
+            </ul>
+        </div> <!-- header_icons -->
+    </header>
+
+    <div class="content_wrapper">
+        <section class="section">
+            <div class="section_header">
+                Стафф
+            </div> <!-- section_header -->
+
+            <div class="section_content">
+                <div class="menu_catalog">
+                    <div class="menu_catalog_item wheels">
+                        <a href="#">
+                            <div class="menu_catalog_item_content">
+                                <img src="assets/img/staff_wheels.jpg" alt="staff_wheels">
+
+                                <div class="menu_catalog_item_text">
+                                    <div class="menu_catalog_item_title">
+                                        колеса
+                                    </div>
+                                    <div class="menu_catalog_item_more">
+                                        <div class="more_text">
+                                            Смотреть все
+                                        </div>
+                                        <div class="more_arrow">
+                                            <img src="assets/img/arrow.svg" alt="arrow_more">
+                                        </div>
+                                    </div>
+                                </div> <!-- menu_catalog_item_text -->
+                            </div>
+                        </a>
+                    </div> <!-- menu_catalog_item -->
+
+                    <div class="menu_catalog_item bearings">
+                        <a href="#">
+                            <div class="menu_catalog_item_content">
+                                <img src="assets/img/staff_bearings.jpg" alt="staff_bearings">
+
+                                <div class="menu_catalog_item_text">
+                                    <div class="menu_catalog_item_title">
+                                        подшипники
+                                    </div>
+                                    <div class="menu_catalog_item_more">
+                                        <div class="more_text">
+                                            Смотреть все
+                                        </div>
+                                        <div class="more_arrow">
+                                            <img src="assets/img/arrow.svg" alt="arrow_more">
+                                        </div>
+                                    </div>
+                                </div> <!-- menu_catalog_item_text -->
+                            </div>
+                        </a>
+                    </div> <!-- menu_catalog_item -->
+
+                </div> <!-- menu_catalog -->
+            </div> <!-- section_content -->
+
+        </section>
+    </div> <!-- content_wrapper -->
+
+
+    <script type="text/javascript" src="../../main_assets/main_js/header.js"></script>
+    <script type="text/javascript" src="../../main_assets/main_js/login.js"></script>
+    <script type="text/javascript" src="../../main_assets/main_js/modalWindow.js"></script>
+    <script type="text/javascript" src="../../main_assets/main_js/favorite.js"></script>
+
+</body>
+<footer class="footer">
+    <img class="footer_logo" src="../../footer/assets/img/logo_footer.svg" alt="t-shop">
+
+    <div class="footer_content">
+
+        <div class="footer_content_item">
+            <div class="footer_subscribe">
+                <div class="footer_subscribe_text">
+                    Узнавайте о скидках первыми
+                </div>
+                <div class="footer_form_subscribe">
+                    <input class="footer_form_input" type="email" placeholder="E-mail" name="email" required>
+                    <button class="footer_form_btn">
+                        <img class="footer_form_arrow" src="../../footer/assets/img/subscribe_arrow.svg"
+                            alt="subscribe">
+                    </button>
+                </div>
+            </div> <!-- footer_subscribe -->
+
+            <div class="footer_telephone">
+                <img class="footer_telephone_img" src="../../footer/assets/img/telephone_footer.svg" alt="Telephone">
+                <a class="footer_telephone_number" href="tel:88002004555">
+                    8 800 200 45 55
+                </a>
+            </div> <!-- footer_telephone -->
+        </div> <!-- footer_content_item -->
+
+        <div class="footer_content_item">
+            <div class="footer_menu">
+                <a href="#" class="footer_menu_item">Одежда</a>
+                <a href="#" class="footer_menu_item">Обувь</a>
+                <a href="#" class="footer_menu_item">Скейты</a>
+                <a href="#" class="footer_menu_item">Стафф</a>
+            </div> <!-- footer_menu -->
+
+            <div class="footer_social">
+                <a class="footer_social_item" href="#"><img class="footer_social_img"
+                        src="../../footer/assets/img/instagram.svg" alt="instagram"></a>
+                <a class="footer_social_item" href="#"><img class="footer_social_img"
+                        src="../../footer/assets/img/telegram.svg" alt="telegram"></a>
+                <a class="footer_social_item" href="#"><img class="footer_social_img"
+                        src="../../footer/assets/img/facebook.svg" alt="facebook"></a>
+            </div> <!-- footer_social -->
+        </div> <!-- footer_content_item -->
+
+        <div class="footer_content_item">
+            <div class="footer_privacy_policy">
+                <a href="#">Политика конфиденциальности</a>
+            </div> <!-- footer_privacy_policy -->
+
+            <div class="footer_ofetra">
+                <a href="#">Оферта</a>
+            </div> <!-- footer_ofetra -->
+
+            <div class="footer_cards">
+                <img class="footer_card" src="../../footer/assets/img/card_1.svg" alt="Mastercard">
+                <img class="footer_card" src="../../footer/assets/img/card_2.svg" alt="Visa">
+                <img class="footer_card" src="../../footer/assets/img/card_3.svg" alt="Mir">
+                <img class="footer_card" src="../../footer/assets/img/card_4.svg" alt="Maestro">
+            </div> <!-- footer_cards -->
+        </div> <!-- footer_content_item -->
+
+    </div> <!-- footer_content -->
+
+
+</footer>
+
+</html>

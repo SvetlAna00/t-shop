@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="rus">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="../../main_assets/main_css/normalize.css">
+    <link rel="stylesheet" href="../../header/assets/css/style.css">
+    <link rel="stylesheet" href="../footer/assets/css/style.css">
+    <link rel="stylesheet" href="item_catalog.css">
+    <link rel="stylesheet" href="../../main_assets/main_css/main.css">
+    <title>T-SHOP</title>
+</head>
+
+<body>
+    <header id="header" class="header">
+        <a href="#">
+            <img class="header_logo" src="../../header/assets/img/logo_header.svg" alt="t-shop">
+        </a>
+
+        <div class="header_menu">
+            <a href="#" class="header_menu_item">Одежда</a>
+            <a href="#" class="header_menu_item">Обувь</a>
+            <a href="#" class="header_menu_item">Скейты</a>
+            <a href="#" class="header_menu_item">Стафф</a>
+        </div> <!-- header_menu -->
+
+        <div class="header_telephone">
+            <img class="header_telephone_img" src="../../header/assets/img/telephone_header.svg" alt="Telephone">
+            <a class="header_telephone_number" href="tel:88002004555">
+                8 800 200 45 55
+            </a>
+        </div> <!-- header_telephone -->
+
+        <div class="header_icons">
+            <ul>
+                <li class="header_icon_item">
+                    <form class="search_form" action="" role="search" method="GET">
+                        <button>
+                            <img class="search_img" src="../../header/assets/img/search_img.svg">
+                        </button>
+                        <input type="text" name="search" class="search_input" id="search_input">
+                    </form>
+
+                </li>
+
+                <li class="header_icon_item">
+                    <div class="modal_item_favourite">
+                        <a id="favourite_icon" href="#">
+                            <img src="../../header/assets/img/favourite.svg" alt="favourite">
+                        </a>
+                        <div id="modal_window_favourite" class="modal_window_favourite">
+
+                            <div id="count_favorite" class="count_favorite"></div>
+                            <div id="text_favorite" class="text_favorite"></div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="header_icon_item">
+                    <div class="modal_item">
+                        <a id="profile_icon" href="#">
+                            <img src="../../header/assets/img/profile.svg" alt="profile">
+                        </a>
+                        <div id="modal_window" class="modal_window">
+
+                            <form action="login.php" method="POST">
+                                <input id="login_email" class="modal_window_login" type="text" placeholder="Логин">
+
+                                <input id="login_pass" class="modal_window_password" type="password"
+                                    placeholder="Пароль">
+
+                                <div class="remember_me">
+                                    <label class="remember_me_text" for="remember_me_checkbox">Запомнить меня</label>
+                                    <input id="remember_me_checkbox" class="remember_me_checkbox" type="checkbox">
+                                </div>
+
+                                <button id="btn_login" class="btn_login">Войти</button>
+                            </form>
+
+                        </div>
+                    </div>
+                </li>
+
+                <li class="header_icon_item">
+                    <a href="#">
+                        <img src="../../header/assets/img/cart.svg" alt="cart">
+                    </a>
+                </li>
+            </ul>
+        </div> <!-- header_icons -->
+    </header>
+
+    <div class="content_wrapper">
+        <section class="section">
+            <div class="section_header item_catalog_header">
+                <a href="#">Каталог</a>
+                /
+                <a href="#">Женская коллекция</a>
+                /
+                <a href="#" class="active">Одежда</a>
+            </div> <!-- section_header -->
+
+            <div class="section_content">
+                <div class="item_catalog_content">
+                    <div class="item_card">
+                        <div class="item_card_photos">
+
+                            <div class="photo_small_slider">
+
+                                <div class="photo_small">
+                                    <img src="assets/img/small_photo.jpg" alt="photo_small">
+                                </div>
+                                <div class="photo_small active_photo">
+                                    <img src="assets/img/small_photo1.jpg" alt="photo_small">
+                                </div>
+                                <div class="photo_small">
+                                    <img src="assets/img/small_photo2.jpg" alt="photo_small">
+                                </div>
+                                <div class="photo_small">
+                                    <img src="assets/img/small_photo3.jpg" alt="photo_small">
+                                </div>
+
+                            </div> <!-- photo_small_slider -->
+
+                            <div class="photo_big_slider">
+
+                                <div class="photo_big ">
+                                    <img src="assets/img/big_photo.jpg" alt="photo_big">
+                                </div>
+                                <div class="photo_big photo_big--active">
+                                    <img src="assets/img/big_photo1.jpg" alt="photo_big">
+                                </div>
+                                <div class="photo_big ">
+                                    <img src="assets/img/big_photo2.jpg" alt="photo_big">
+                                </div>
+                                <div class="photo_big">
+                                    <img src="assets/img/big_photo3.jpg" alt="photo_big">
+                                </div>
+
+                            </div> <!-- photo_big_slider -->
+
+
+                        </div> <!-- item_card_photos -->
+
+                        <div class="item_card_buy">
+                            <div class="card_category">
+                                Худи
+                            </div>
+
+                            <div class="card_title">
+                                Straight Out Turvy Print
+                            </div>
+
+                            <div class="card_code">
+                                Артикул: VA5DN89P1
+                            </div>
+
+                            <div class="card_sizes">
+                                <div class="card_size_title">
+                                    Размер
+                                </div>
+                                <div class="card_select_size">
+                                    <div id="card_size" class="card_size">XS</div>
+                                    <div id="card_size" class="card_size">S</div>
+                                    <div id="card_size" class="card_size">m</div>
+                                    <div id="card_size" class="card_size">l</div>
+                                </div>
+
+                                <div class="card_how_select_size">
+                                    <a href="#">
+                                        Как выбрать размер
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="card_colors">
+                                <div class="card_color_title">
+                                    Цвет
+                                </div>
+                                <div class="card_select_colors">
+
+                                    <div class="card_select_color">
+                                        <div class="card_color">
+                                            <div class="color"></div>
+                                        </div>
+                                        <div class="card_color_name"></div>
+                                    </div> <!-- card_select_color -->
+
+                                </div> <!-- card_select_colors -->
+                            </div> <!-- card_colors -->
+
+                            <div class="total_coin">
+                                <div class="total_coin_value">5890</div>
+                                <div class="total_coin_currency">руб</div>
+                            </div>
+
+                            <div class="card_buy">
+                                <button class="btn_yellow btn_add_to_cart">купить</button>
+                            </div>
+
+                            <div class="card_favorite">
+                                <button id="btn_favorite" class="btn_add_to_favorite">в избранное</button>
+                            </div>
+
+                        </div> <!-- item_card_buy -->
+                    </div> <!-- item_card -->
+
+                    <div class="item_discription">
+                        <div class="item_discription_about">
+                            <div class="item_about_title">
+                                О товаре
+                            </div> <!-- item_about_title -->
+
+                            <div class="item_about_content">
+                                Strait Out Turvy Print представляет собой худи с капюшоном
+                                из французского махера, изготовленного из высококачественного материала с увеличенными
+                                рукавами, логотипом спереди
+                                и повторяющимся шахматным принтом. Оно имеет укороченную, свободную посадку. Рост модели
+                                — 5 футов 9 дюймов, размер S.
+                            </div> <!-- item_about_content -->
+                        </div> <!-- item_discription_about -->
+
+                        <div class="item_discription_peculiarities">
+                            <div class="item_peculiarities_title">
+                                Особенности
+                            </div> <!-- item_peculiarities_title -->
+
+                            <div class="item_peculiarities_content">
+                                <div class="peculiaritie_icon">
+                                    <img class="peculiaritie_img" src="assets/img/cotton.svg" alt="cotton">
+                                    <div class="peculiaritie_text">84% хлопка</div>
+                                </div> <!-- peculiaritie_icon -->
+
+                                <div class="peculiaritie_icon">
+                                    <img class="peculiaritie_img" src="assets/img/poly.svg" alt="polyester">
+                                    <div class="peculiaritie_text">16% полиэстера</div>
+                                </div> <!-- peculiaritie_icon -->
+
+                            </div> <!-- item_peculiarities_content -->
+                        </div> <!-- item_discription_peculiarities -->
+
+                    </div> <!-- item_catalog_content -->
+
+                </div> <!-- item_catalog_content -->
+            </div> <!-- section_content -->
+        </section>
+
+        <section class="section">
+            <div class="section_header">
+                с этим товаром рекумендуют
+            </div> <!-- section_header -->
+
+            <div class="section_content">
+                <div class="items_recommend">
+
+                    <a href="#" class="item_recommend new">
+                        <div class="item_recommend_img">
+                            <img src="assets/img/recom1.jpg" alt="">
+                        </div>
+                        <div class="item_recommend_discription">
+                            <div class="item_recommend_category">
+                                куртка
+                            </div>
+                            <div class="item_recommend_title">
+                                Forces Quilted
+                            </div>
+                            <div class="item_recommend_coin">
+                                7690 руб
+                            </div>
+                        </div> <!-- item_recommend_discription -->
+                    </a> <!-- item_recommend -->
+
+                    <a href="#" class="item_recommend hit">
+                        <div class="item_recommend_img">
+                            <img src="assets/img/recom2.jpg" alt="">
+                        </div>
+                        <div class="item_recommend_discription">
+                            <div class="item_recommend_category">
+                                Кеды
+                            </div>
+                            <div class="item_recommend_title">
+                                Skate Classics SK8-low
+                            </div>
+                            <div class="item_recommend_coin">
+                                7990 руб
+                            </div>
+                        </div> <!-- item_recommend_discription -->
+                    </a> <!-- item_recommend -->
+
+                    <a href="#" class="item_recommend new">
+                        <div class="item_recommend_img">
+                            <img src="assets/img/recom3.jpg" alt="">
+                        </div>
+                        <div class="item_recommend_discription">
+                            <div class="item_recommend_category">
+                                Футболка
+                            </div>
+                            <div class="item_recommend_title">
+                                Vans Floral
+                            </div>
+                            <div class="item_recommend_coin">
+                                2990 Руб
+                            </div>
+                        </div> <!-- item_recommend_discription -->
+                    </a> <!-- item_recommend -->
+
+                    <a href="#" class="item_recommend sale">
+                        <div class="item_recommend_img">
+                            <img src="assets/img/recom4.jpg" alt="">
+                        </div>
+                        <div class="item_recommend_discription">
+                            <div class="item_recommend_category">
+                                Женские брюки
+                            </div>
+                            <div class="item_recommend_title">
+                                Printed Authentic Chino
+                            </div>
+                            <div class="item_recommend_coin">
+                                <div class="item_recommend_old_coin">
+                                    6790 руб
+                                </div>
+                                <div class="item_recommend_new_coin">
+                                    3395 руб
+                                </div>
+                            </div>
+                        </div> <!-- item_recommend_discription -->
+                    </a> <!-- item_recommend -->
+
+                </div> <!-- items_recommend -->
+            </div> <!-- section_content -->
+        </section>
+    </div> <!-- content_wrapper -->
+
+
+    <script type="text/javascript" src="../../main_assets/main_js/header.js"></script>
+    <script type="text/javascript" src="../../main_assets/main_js/favorite.js"></script>
+    <script type="text/javascript" src="../../main_assets/main_js/login.js"></script>
+    <script type="text/javascript" src="../../main_assets/main_js/modalWindow.js"></script>
+    <script type="text/javascript" src="photoSlider.js"></script>
+    <script type="text/javascript" src="chooseSize.js"></script>
+    <script type="text/javascript" src="chooseColor.js"></script>
+
+</body>
+<footer class="footer">
+    <img class="footer_logo" src="../../footer/assets/img/logo_footer.svg" alt="t-shop">
+
+    <div class="footer_content">
+
+        <div class="footer_content_item">
+            <div class="footer_subscribe">
+                <div class="footer_subscribe_text">
+                    Узнавайте о скидках первыми
+                </div>
+                <div class="footer_form_subscribe">
+                    <input class="footer_form_input" type="email" placeholder="E-mail" name="email" required>
+                    <button class="footer_form_btn">
+                        <img class="footer_form_arrow" src="../../footer/assets/img/subscribe_arrow.svg" alt="subscribe">
+                    </button>
+                </div>
+            </div> <!-- footer_subscribe -->
+
+            <div class="footer_telephone">
+                <img class="footer_telephone_img" src="../../footer/assets/img/telephone_footer.svg" alt="Telephone">
+                <a class="footer_telephone_number" href="tel:88002004555">
+                    8 800 200 45 55
+                </a>
+            </div> <!-- footer_telephone -->
+        </div> <!-- footer_content_item -->
+
+        <div class="footer_content_item">
+            <div class="footer_menu">
+                <a href="#" class="footer_menu_item">Одежда</a>
+                <a href="#" class="footer_menu_item">Обувь</a>
+                <a href="#" class="footer_menu_item">Скейты</a>
+                <a href="#" class="footer_menu_item">Стафф</a>
+            </div> <!-- footer_menu -->
+
+            <div class="footer_social">
+                <a class="footer_social_item" href="#"><img class="footer_social_img"
+                        src="../../footer/assets/img/instagram.svg" alt="instagram"></a>
+                <a class="footer_social_item" href="#"><img class="footer_social_img"
+                        src="../../footer/assets/img/telegram.svg" alt="telegram"></a>
+                <a class="footer_social_item" href="#"><img class="footer_social_img"
+                        src="../../footer/assets/img/facebook.svg" alt="facebook"></a>
+            </div> <!-- footer_social -->
+        </div> <!-- footer_content_item -->
+
+        <div class="footer_content_item">
+            <div class="footer_privacy_policy">
+                <a href="#">Политика конфиденциальности</a>
+            </div> <!-- footer_privacy_policy -->
+
+            <div class="footer_ofetra">
+                <a href="#">Оферта</a>
+            </div> <!-- footer_ofetra -->
+
+            <div class="footer_cards">
+                <img class="footer_card" src="../../footer/assets/img/card_1.svg" alt="Mastercard">
+                <img class="footer_card" src="../../footer/assets/img/card_2.svg" alt="Visa">
+                <img class="footer_card" src="../../footer/assets/img/card_3.svg" alt="Mir">
+                <img class="footer_card" src="../../footer/assets/img/card_4.svg" alt="Maestro">
+            </div> <!-- footer_cards -->
+        </div> <!-- footer_content_item -->
+
+    </div> <!-- footer_content -->
+
+
+</footer>
+
+</html>

@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responcive.css">
+  <link rel="stylesheet" href="../../main_assets/main_css/normalize.css">
+  <link rel="stylesheet" href="../../header/assets/css/style.css">
+  <link rel="stylesheet" href="../../footer/assets/css/style.css">
+  <link rel="stylesheet" href="../../main_assets/main_css/main.css">
+  <title>T-SHOP</title>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <header id="header" class="header">
+      <a href="#">
+        <img class="header_logo" src="../../header/assets/img/logo_header.svg" alt="t-shop">
+      </a>
+
+      <div class="header_menu">
+        <a href="#" class="header_menu_item">Одежда</a>
+        <a href="#" class="header_menu_item">Обувь</a>
+        <a href="#" class="header_menu_item">Скейты</a>
+        <a href="#" class="header_menu_item">Стафф</a>
+      </div> <!-- header_menu -->
+
+      <div class="header_telephone">
+        <img class="header_telephone_img" src="../../header/assets/img/telephone_header.svg" alt="Telephone">
+        <a class="header_telephone_number" href="tel:88002004555">
+          8 800 200 45 55
+        </a>
+      </div> <!-- header_telephone -->
+
+      <div class="header_icons">
+        <ul>
+          <li class="header_icon_item">
+            <form class="search_form" action="" role="search" method="GET">
+              <button>
+                <img class="search_img" src="../../header/assets/img/search_img.svg">
+              </button>
+              <input type="text" name="search" class="search_input" id="search_input">
+            </form>
+
+          </li>
+
+          <li class="header_icon_item">
+            <div class="modal_item_favourite">
+              <a id="favourite_icon" href="#">
+                <img src="../../header/assets/img/favourite.svg" alt="favourite">
+              </a>
+              <div id="modal_window_favourite" class="modal_window_favourite">
+
+                <div id="count_favorite" class="count_favorite">0</div>
+                <div class="text_favorite">Товаров</div>
+              </div>
+            </div>
+          </li>
+
+          <li class="header_icon_item">
+            <div class="modal_item">
+              <a id="profile_icon" href="#">
+                <img src="../../header/assets/img/profile.svg" alt="profile">
+              </a>
+              <div id="modal_window" class="modal_window">
+
+                <form action="login.php" method="POST">
+                  <input id="login_email" class="modal_window_login" type="text" placeholder="Логин">
+
+                  <input id="login_pass" class="modal_window_password" type="password" placeholder="Пароль">
+
+                  <div class="remember_me">
+                    <label class="remember_me_text" for="remember_me_checkbox">Запомнить меня</label>
+                    <input id="remember_me_checkbox" class="remember_me_checkbox" type="checkbox">
+                  </div>
+
+                  <button id="btn_login" class="btn_login">Войти</button>
+                </form>
+
+              </div>
+            </div>
+          </li>
+
+          <li class="header_icon_item">
+            <a href="#">
+              <img src="../../header/assets/img/cart.svg" alt="cart">
+            </a>
+          </li>
+        </ul>
+      </div> <!-- header_icons -->
+    </header>
+    <section>
+      <div class="content_wrapper">
+        <section class="section">
+          <div class="container">
+            <div class="section_header relative">
+              Каталог
+            </div> <!-- section_header -->
+            <div class="row">
+              <div class="col-md-3">
+                <ul class="catalogUl">
+                  <li><span class="catalogLi">Новинки</span></li>
+                  <li>
+                    <div class="accordionHeader flex juatifyBetween alignCenter">
+                      <span class="catalogLi liHover">Женская коллекция </span><img src="img/angle-arrow-down.png"
+                        alt="">
+                    </div>
+                    <ul class="accordionUl">
+                      <li>
+                        <div class="accordionHeader2 flex juatifyBetween alignCenter">
+                          <span class="liHover">Одежда</span><img src="img/angle-arrow-down.png" alt="">
+                        </div>
+                        <ul class="accordionUl2">
+                          <li><a href="" class="liHover">Худи</a></li>
+                          <li><a href="" class="liHover">Футболки</a></li>
+                          <li><a href="" class="liHover">Куртки</a></li>
+                          <li><a href="" class="liHover">Джинсы</a></li>
+                          <li><a href="" class="liHover">Толстовки</a></li>
+                          <li><a href="" class="liHover">Лонгсливы</a></li>
+                          <li><a href="" class="liHover">Обувь</a></li>
+                          <li><a href="" class="liHover">Распродажа</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <div class="accordionHeader flex juatifyBetween alignCenter">
+                      <span class="catalogLi liHover">Мужская коллекция </span><img src="img/angle-arrow-down.png"
+                        alt="">
+                    </div>
+                    <ul class="accordionUl">
+                      <li>
+                        <div class="accordionHeader2 flex juatifyBetween alignCenter">
+                          <span class="liHover">Одежда</span><img src="img/angle-arrow-down.png" alt="">
+                        </div>
+                        <ul class="accordionUl2">
+                          <li><a href="" class="liHover">Худи</a></li>
+                          <li><a href="" class="liHover">Футболки</a></li>
+                          <li><a href="" class="liHover">Куртки</a></li>
+                          <li><a href="" class="liHover">Джинсы</a></li>
+                          <li><a href="" class="liHover">Толстовки</a></li>
+                          <li><a href="" class="liHover">Лонгсливы</a></li>
+                          <li><a href="" class="liHover">Обувь</a></li>
+                          <li><a href="" class="liHover">Распродажа</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <div class="accordionHeader flex juatifyBetween alignCenter">
+                      <span class="catalogLi liHover">Скейты </span><img src="img/angle-arrow-down.png" alt="">
+                    </div>
+                    <ul class="accordionUl">
+                      <li>
+                        <div class="accordionHeader2 flex juatifyBetween alignCenter">
+                          <span class="liHover">Производитель</span><img src="img/angle-arrow-down.png" alt="">
+                        </div>
+                        <ul class="accordionUl2">
+                          <li><a href="" class="liHover">ADIO</a></li>
+                          <li><a href="" class="liHover">ANTI-HERO</a></li>
+                          <li><a href="" class="liHover">ELEMENT</a></li>
+                          <li><a href="" class="liHover">DC</a></li>
+                          <li><a href="" class="liHover">ELEMENT</a></li>
+                          <li><a href="" class="liHover">FLIP</a></li>
+                          <li><a href="" class="liHover">QUIKSILVER</a></li>
+                          <li><a href="" class="liHover">FALLEN</a></li>
+                          <li><a href="" class="liHover">NEW BALANCE</a></li>
+                          <li><a href="" class="liHover">SANTA CRUZ</a></li>
+                        </ul>
+                      </li>
+
+                      <li>
+                        <div class="accordionHeader2 flex juatifyBetween alignCenter">
+                          <span class="liHover">Ширина деки </span><img src="img/angle-arrow-down.png" alt="">
+                        </div>
+                        <ul class="accordionUl2">
+                          <li>
+                            <input type="range" class="rangeInput" min="0" max="100" value="10">
+                            <outpute style="display: block">0</outpute>
+                          </li>
+                        </ul>
+
+                      </li>
+                    </ul>
+                  </li>
+                  <li><span class="catalogLi liHover">Колеса</span></li>
+                  <li><span class="catalogLi liHover">Подшипники</span></li>
+                  <li>
+                    <span class="catalogLi liHover">Цена</span><br>
+                    <div class="rangeslider">
+                      <!--                <input class="min" name="range_1" type="range" min="1" max="100" value="10" class="rangeInput"/>-->
+                      <!--                <input class="max" name="range_1" type="range" min="1" max="100" value="90" class="rangeInput"/>-->
+                      <!--                <span class="range_min light left">0</span>-->
+                      <!--                <span class="range_max light right">15999</span>-->
+
+                      <input type="range" id="range-left" min="0" max="1599" value="100">
+                      <input type="range" id="range-right" min="0" max="1599" value="1000"><br>
+                      <div class="range-output flex juatifyBetween">
+                        <outpute id="range-left-out">0</outpute>
+                        <outpute id="range-right-out">100</outpute>
+                      </div>
+
+                      <!--                <div class="slider">-->
+                      <!--                  <div class="track"></div>-->
+                      <!--                  <div class="range"></div>-->
+                      <!--                  <div class="thumb left"></div>-->
+                      <!--                  <div class="thumb right"></div>-->
+                      <!--                </div>-->
+                    </div>
+                  </li>
+                  <li>
+                    <div class="accordionHeader flex juatifyBetween alignCenter">
+                      <span class="catalogLi liHover">Цвет </span><img src="img/angle-arrow-down.png" alt="">
+                    </div>
+                    <ul class="accordionUl2">
+                      <li>
+                        <div class="colorCont flex juatifyBetween">
+                          <div class="blackColor"></div>
+                          <div class="whiteColor"></div>
+                          <div class="yellowColor"></div>
+                          <div class="redColor"></div>
+                          <div class="pinkColor"></div>
+                          <div class="green1Color"></div>
+                          <div class="blueColor"></div>
+                          <div class="purpleColor"></div>
+                          <div class="green2Color"></div>
+                          <div class="greyColor"></div>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <div class="accordionHeader flex juatifyBetween alignCenter">
+                      <span class="catalogLi liHover">Размер </span><img src="img/angle-arrow-down.png" alt="">
+                    </div>
+                    <ul class="accordionUl2">
+                      <li>
+                        <div class="sizeCont">
+                          <div>XS</div>
+                          <div>S</div>
+                          <div>M</div>
+                          <div>L</div>
+                          <div>35</div>
+                          <div>36</div>
+                          <div>37</div>
+                          <div>38</div>
+                          <div>39</div>
+                          <div>40</div>
+                          <div>41</div>
+                          <div>42</div>
+                          <div>43</div>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-9">
+                <div class="row">
+                  <div class="col-md-12 cardTopButton flex juatifyBetween">
+                    <div class="cardSort">Сортировать: по популярности <img src="img/angle-arrow-down.png" alt=""></div>
+                    <div class="cardImgCont flex"><img src="img/nineCardChoose.png" alt=""
+                        style="margin-right: 20px;"><img src="img/fourCard.png" alt=""></div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="cardCont cardContNine relative">
+                      <div class="cardContImg">
+                        <div class="newContNine flex juatifyCenter alignCenter">NEW</div>
+                        <img src="img/chooseItem.png" alt="" class="imgChoose">
+                        <img class="itemImg" src="img/skate1.png" alt="">
+                      </div>
+                      <div class="cardContInfo relative">
+                        <div class="cardContInfoHead flex">
+                          <div class="starContNine flex">
+                            <img src="img/Star1.png" alt="">
+                            <img src="img/Star1.png" alt="">
+                            <img src="img/Star1.png" alt="">
+                            <img src="img/Star4.png" alt="">
+                            <img src="img/Star4.png" alt="">
+                          </div>
+                          <div class="fitback fitbackNine">
+                            <span>8 </span> <span> отзывов</span>
+                          </div>
+                        </div>
+                        <div class="itemName">Лонгслив</div>
+                        <div class="itemType">Flying V CLASSIC</div>
+                        <div class="itemPrice">2790 руб</div>
+                        <div class="basketImg">
+                          <img src="img/basketIcon.png" alt="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="cardCont cardContNine relative">
+                      <div class="cardContImg">
+                        <div class="newContNine flex juatifyCenter alignCenter">NEW</div>
+                        <img src="img/chooseItem.png" alt="" class="imgChoose">
+                        <img class="itemImg" src="img/skate2.png" alt="">
+                      </div>
+                      <div class="cardContInfo relative">
+                        <div class="cardContInfoHead flex">
+                          <div class="starContNine flex">
+                            <img src="img/Star1.png" alt="">
+                            <img src="img/Star1.png" alt="">
+                            <img src="img/Star1.png" alt="">
+                            <img src="img/Star1.png" alt="">
+                            <img src="img/Star4.png" alt="">
+                          </div>
+                          <div class="fitback fitbackNine">
+                            <span>10 </span> <span> отзывов</span>
+                          </div>
+                        </div>
+                        <div class="itemName">Футболка</div>
+                        <div class="itemType">Sandy Liang For</div>
+                        <div class="itemPrice">4690 руб</div>
+                        <div class="basketImg">
+                          <img src="img/basketIcon.png" alt="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="cardCont cardContNine relative">
+                      <div class="cardContImg">
+                        <div class="newContNine flex juatifyCenter alignCenter">NEW</div>
+                        <img src="img/chooseItem.png" alt="" class="imgChoose">
+                        <img class="itemImg" src="img/skate3.png" alt="">
+                      </div>
+                      <div class="cardContInfo relative">
+                        <div class="cardContInfoHead flex">
+                          <div class="starContNine flex">
+                            <img src="img/Star1.png" alt="">
+                            <img src="img/Star1.png" alt="">
+                            <img src="img/Star4.png" alt="">
+                            <img src="img/Star4.png" alt="">
+                            <img src="img/Star4.png" alt="">
+                          </div>
+                          <div class="fitback fitbackNine">
+                            <span>3 </span> <span> отзывов</span>
+                          </div>
+                        </div>
+                        <div class="itemName">Толстовка</div>
+                        <div class="itemType">Strait Out Turvy</div>
+                        <div class="itemPrice">5890 руб</div>
+                        <div class="basketImg">
+                          <img src="img/basketIcon.png" alt="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="cardCont cardContNine relative">
+                      <div class="cardContImg">
+                        <div class="hotContNine flex juatifyCenter alignCenter">HOT</div>
+                        <img src="img/chooseItem.png" alt="" class="imgChoose">
+                        <img class="itemImg" src="img/skate4.png" alt="">
+                      </div>
+                      <div class="cardContInfo relative">
+                        <div class="cardContInfoHead flex">
+                          <div class="starContNine flex">
+                            <img src="img/Star1.png" alt="">
+                            <img src="img/Star1.png" alt="">
+                            <img src="img/Star1.png" alt="">
+                            <img src="img/Star1.png" alt="">
+                            <img src="img/Star4.png" alt="">
+                          </div>
+                          <div class="fitback fitbackNine">
+                            <span>16 </span> <span> отзывов</span>
+                          </div>
+                        </div>
+                        <div class="itemName">Футболка</div>
+                        <div class="itemType">Mini Stpipe Pocket</div>
+                        <div class="itemPrice">3690 руб</div>
+                        <div class="basketImg">
+                          <img src="img/basketIcon.png" alt="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="cardCont cardContNine relative">
+                      <div class="cardContImg">
+                        <div class="hotContNine flex juatifyCenter alignCenter">HOT</div>
+                        <img src="img/chooseItem.png" alt="" class="imgChoose">
+                        <img class="itemImg" src="img/skate5.png" alt="">
+                      </div>
+                      <div class="cardContInfo relative">
+                        <div class="cardContInfoHead flex">
+                          <div class="starContNine flex">
+                            <img src="img/Star1.png" alt="">
+                            <img src="img/Star1.png" alt="">
+                            <img src="img/Star1.png" alt="">
+                            <img src="img/Star1.png" alt="">
+                            <img src="img/Star1.png" alt="">
+                          </div>
+                          <div class="fitback fitbackNine">
+                            <span>12 </span> <span> отзывов</span>
+                          </div>
+                        </div>
+                        <div class="itemName">Толстовка</div>
+                        <div class="itemType">Flying V Boxy</div>
+                        <div class="itemPrice">5890 руб</div>
+                        <div class="basketImg">
+                          <img src="img/basketIcon.png" alt="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="cardCont cardContNine relative">
+                      <div class="cardContImg">
+                        <div class="newContNine flex juatifyCenter alignCenter">NEW</div>
+                        <img src="img/chooseItem.png" alt="" class="imgChoose">
+                        <img class="itemImg" src="img/skate6.png" alt="">
+                      </div>
+                      <div class="cardContInfo relative">
+                        <div class="cardContInfoHead flex">
+                          <div class="starContNine flex">
+                            <img src="img/Star1.png" alt="">
+                            <img src="img/Star1.png" alt="">
+                            <img src="img/Star1.png" alt="">
+                            <img src="img/Star1.png" alt="">
+                            <img src="img/Star4.png" alt="">
+                          </div>
+                          <div class="fitback fitbackNine">
+                            <span>10 </span> <span> отзывов</span>
+                          </div>
+                        </div>
+                        <div class="itemName">Худи</div>
+                        <div class="itemType">Straight Out Turvy Print</div>
+                        <div class="itemPrice">5890 руб</div>
+                        <div class="basketImg">
+                          <img src="img/basketIcon.png" alt="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="cardCont cardContNine relative">
+                      <div class="cardContImg">
+                        <div class="newContNine flex juatifyCenter alignCenter">NEW</div>
+                        <img src="img/chooseItem.png" alt="" class="imgChoose">
+                        <img class="itemImg" src="img/skate7.png" alt="">
+                      </div>
+                      <div class="cardContInfo relative">
+                        <div class="cardContInfoHead flex">
+                          <div class="starContNine flex">
+                            <img src="img/Star1.png" alt="">
+                            <img src="img/Star1.png" alt="">
+                            <img src="img/Star1.png" alt="">
+                            <img src="img/Star1.png" alt="">
+                            <img src="img/Star4.png" alt="">
+                          </div>
+                          <div class="fitback fitbackNine">
+                            <span>9 </span> <span> отзывов</span>
+                          </div>
+                        </div>
+                        <div class="itemName">Комплект скейтборд</div>
+                        <div class="itemType">Flip HKD Thrashed Complete</div>
+                        <div class="itemPrice">11450 руб</div>
+                        <div class="basketImg">
+                          <img src="img/basketIcon.png" alt="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="cardCont cardContNine relative">
+                      <div class="cardContImg">
+                        <div class="newContNine flex juatifyCenter alignCenter">NEW</div>
+                        <img src="img/chooseItem.png" alt="" class="imgChoose">
+                        <img class="itemImg" src="img/skate8.png" alt="">
+                      </div>
+                      <div class="cardContInfo relative">
+                        <div class="cardContInfoHead flex">
+                          <div class="starContNine flex">
+                            <img src="img/Star1.png" alt="">
+                            <img src="img/Star1.png" alt="">
+                            <img src="img/Star1.png" alt="">
+                            <img src="img/Star1.png" alt="">
+                            <img src="img/Star4.png" alt="">
+                          </div>
+                          <div class="fitback fitbackNine">
+                            <span>10 </span> <span> отзывов</span>
+                          </div>
+                        </div>
+                        <div class="itemName">Комплект скейтборд</div>
+                        <div class="itemType">Flip Oliv Doughboy Complete</div>
+                        <div class="itemPrice">11450 руб</div>
+                        <div class="basketImg">
+                          <img src="img/basketIcon.png" alt="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="cardCont cardContNine relative">
+                      <div class="cardContImg">
+                        <div class="newContNine flex juatifyCenter alignCenter">NEW</div>
+                        <img src="img/chooseItem.png" alt="" class="imgChoose">
+                        <img class="itemImg" src="img/skate9.png" alt="">
+                      </div>
+                      <div class="cardContInfo relative">
+                        <div class="cardContInfoHead flex">
+                          <div class="starContNine flex">
+                            <img src="img/Star1.png" alt="">
+                            <img src="img/Star1.png" alt="">
+                            <img src="img/Star1.png" alt="">
+                            <img src="img/Star4.png" alt="">
+                            <img src="img/Star4.png" alt="">
+                          </div>
+                          <div class="fitback fitbackNine">
+                            <span>7 </span> <span> отзывов</span>
+                          </div>
+                        </div>
+                        <div class="itemName">Комплект скейтборд </div>
+                        <div class="itemType">Flip Odyssey Complete</div>
+                        <div class="itemPrice">11450 руб</div>
+                        <div class="basketImg">
+                          <img src="img/basketIcon.png" alt="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="pagination flex juatifyCenter">
+                      <a href=""><img src="img/ArrowLeft.png" alt=""></a>
+                      <a href="" class="active ml-10 mr-10">01 </a> / <a href="" class="ml-10 mr-10 "> 09</a>
+                      <a href=""><img src="img/ArrowRight.png" alt=""></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+  </div>
+
+  <footer class="footer">
+    <img class="footer_logo" src="../../footer/assets/img/logo_footer.svg" alt="t-shop">
+
+    <div class="footer_content">
+
+      <div class="footer_content_item">
+        <div class="footer_subscribe">
+          <div class="footer_subscribe_text">
+            Узнавайте о скидках первыми
+          </div>
+          <div class="footer_form_subscribe">
+            <input class="footer_form_input" type="email" placeholder="E-mail" name="email" required>
+            <button class="footer_form_btn">
+              <img class="footer_form_arrow" src="../../footer/assets/img/subscribe_arrow.svg" alt="subscribe">
+            </button>
+          </div>
+        </div> <!-- footer_subscribe -->
+
+        <div class="footer_telephone">
+          <img class="footer_telephone_img" src="../../footer/assets/img/telephone_footer.svg" alt="Telephone">
+          <a class="footer_telephone_number" href="tel:88002004555">
+            8 800 200 45 55
+          </a>
+        </div> <!-- footer_telephone -->
+      </div> <!-- footer_content_item -->
+
+      <div class="footer_content_item">
+        <div class="footer_menu">
+          <a href="#" class="footer_menu_item">Одежда</a>
+          <a href="#" class="footer_menu_item">Обувь</a>
+          <a href="#" class="footer_menu_item">Скейты</a>
+          <a href="#" class="footer_menu_item">Стафф</a>
+        </div> <!-- footer_menu -->
+
+        <div class="footer_social">
+          <a class="footer_social_item" href="#"><img class="footer_social_img" src="../../footer/assets/img/instagram.svg"
+              alt="instagram"></a>
+          <a class="footer_social_item" href="#"><img class="footer_social_img" src="../../footer/assets/img/telegram.svg"
+              alt="telegram"></a>
+          <a class="footer_social_item" href="#"><img class="footer_social_img" src="../../footer/assets/img/facebook.svg"
+              alt="facebook"></a>
+        </div> <!-- footer_social -->
+      </div> <!-- footer_content_item -->
+
+      <div class="footer_content_item">
+        <div class="footer_privacy_policy">
+          <a href="#">Политика конфиденциальности</a>
+        </div> <!-- footer_privacy_policy -->
+
+        <div class="footer_ofetra">
+          <a href="#">Оферта</a>
+        </div> <!-- footer_ofetra -->
+
+        <div class="footer_cards">
+          <img class="footer_card" src="../../footer/assets/img/card_1.svg" alt="Mastercard">
+          <img class="footer_card" src="../../footer/assets/img/card_2.svg" alt="Visa">
+          <img class="footer_card" src="../../footer/assets/img/card_3.svg" alt="Mir">
+          <img class="footer_card" src="../../footer/assets/img/card_4.svg" alt="Maestro">
+        </div> <!-- footer_cards -->
+      </div> <!-- footer_content_item -->
+
+    </div> <!-- footer_content -->
+
+
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+    integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+    crossorigin="anonymous"></script>
+  <script src="script/script.js"></script>
+  <script type="text/javascript" src="../../main_assets/main_js/favorite.js"></script>
+  <script type="text/javascript" src="../../main_assets/main_js/header.js"></script>
+  <script type="text/javascript" src="../../main_assets/main_js/login.js"></script>
+  <script type="text/javascript" src="../../main_assets/main_js/modalWindow.js"></script>
+
+</body>
+
+</html>
