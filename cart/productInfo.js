@@ -27,17 +27,17 @@ let number = document.querySelector('.number_product');
 counter = 1;
 number.innerHTML = counter;
 
-
 let reduceNumber = document.querySelector('.reduce_number_product');
 let addNumber = document.querySelector('.add_number_product');
 
 let updateNum = () => {
     number.innerHTML = counter;
+
+    totalCoinValue.innerHTML = (parseInt(productCoin.innerHTML) * parseInt(number.innerHTML));
 }
 
 let lessNum = () => {
     counter--;
-
     updateNum();
 
     if (counter <= 0) {
@@ -48,7 +48,6 @@ let lessNum = () => {
 let moreNum = () => {
     counter++;
     product.style.display = "";
-
     updateNum();
 }
 

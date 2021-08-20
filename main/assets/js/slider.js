@@ -83,20 +83,36 @@ let updateSaleSlidePosition = () => {
     }
 }
 
+// prevSale
+let showPrevSaleSlide = () => {
+    i--;
+    updateSaleSlidePosition();
+}
 // newxtSale
 let showNextSaleSlide = () => {
     i++;
     if (i < saleSlidesNum) {
         updateSaleSlidePosition();
     }
-}
-// prevSale
-let showPrevSaleSlide = () => {
-    i--;
-    updateSaleSlidePosition();
+    else {
+        showPrevSaleSlide()
+    }
 }
 
-setInterval(showNextSaleSlide(), 5000);
+setInterval(() => {
+    if (nextSaleArrow.style.display == '') {
+        i++;
+        updateSaleSlidePosition();
+    }
+    else {
+        i--;
+        updateSaleSlidePosition();
+        if (nextSaleArrow.style.display == '') {
+            i--;
+            updateSaleSlidePosition();
+        }
+    }
+}, 3000);
 
 nextSaleArrow.addEventListener("click", showNextSaleSlide);
 prevSaleArrow.addEventListener("click", showPrevSaleSlide);
@@ -139,6 +155,24 @@ let showPrevNewsSlide = () => {
     updateNewsSlidePosition();
 }
 
+window.addEventListener("scroll", () => {
+    const posNews = document.querySelector('.news_slider_item').getBoundingClientRect();
+    if (posNews.top) {
+
+        setInterval(() => {
+            if (nextNewsArrow.style.display === '') {
+                console.log("News works")
+                updateNewsSlidePosition();
+            }
+            else {
+                console.log(i)
+                i--;
+                updateNewsSlidePosition();
+            }
+        }, 3000)
+    }
+}
+)
 nextNewsArrow.addEventListener("click", showNextNewsSlide);
 prevNewsArrow.addEventListener("click", showPrevNewsSlide);
 // _______________________________________________________________
@@ -158,7 +192,6 @@ window.setInterval(() => {
     if (pos > 300 || pos < -150) {
         jump *= (-1);
     }
-    console.log(pos)
     brendList.style.right = pos + 'px';
 }, 100);
 

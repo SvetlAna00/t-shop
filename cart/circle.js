@@ -25,12 +25,29 @@ let saleCoin = document.querySelector('.sale_total_coin');
 saleCoin.innerHTML = "0 руб"
 
 let totalCoinValue = document.querySelector('.place_an_order_total_coin');
-totalCoinValue.innerHTML = "0"
+totalCoinValue.innerHTML = (parseInt(productCoin.innerHTML) * parseInt(number.innerHTML));
+
+let updateTotalCoin = () => {
+    getPromo();
+    if (isNaN(parseInt(deliveryCoin.innerHTML))) {
+        pickupBtn.style.background = "#ff0000";
+        deliveryBtn.style.background = "#ff0000";
+    }
+    else {
+        totalCoinValue.innerHTML = ((number.innerHTML * parseInt(productCoin.innerHTML)) + parseInt(deliveryCoin.innerHTML)) - parseInt(promocodeCoin.innerHTML) - parseInt(saleCoin.innerHTML);
+    }
+}
 
 let placeAnOrder = () => {
     getPromo();
-    totalCoinValue.innerHTML = (parseInt(productCoin.innerHTML) + parseInt(deliveryCoin.innerHTML)) - parseInt(promocodeCoin.innerHTML) - parseInt(saleCoin.innerHTML);
-    console.log(parseInt(saleCoin.innerHTML))
+    if (isNaN(parseInt(deliveryCoin.innerHTML))) {
+        pickupBtn.style.background = "#ff0000";
+        deliveryBtn.style.background = "#ff0000";
+        totalCoinValue.innerHTML = "Error";
+    }
+    else {
+        updateTotalCoin();
+    }
 }
 btnPlaceAnOrder.addEventListener("click", placeAnOrder)
 
@@ -39,24 +56,30 @@ let promoActive = (current) => {
     if (promoCounterClicks % 2 != 0) {
         makeActive(current);
         getPromo();
+
+        updateTotalCoin();
     }
     else {
         disActive(current);
+        promocodeCoin.innerHTML = "";
         input.removeAttribute('readonly');
+        updateTotalCoin();
     }
 }
 // ......................................................................
 
 let getPromo = () => {
     promoText = document.querySelector('.promo_input').value;
-    input.readOnly = "true";
-    if (promocodes.indexOf(promoText) === -1) {
+    if (promoCounterClicks % 2 != 0) {
+        input.readOnly = "true";
+    }
+    if (promocodes.indexOf(promoText) === -1 && promoCounterClicks % 2 != 0) {
         document.querySelector('.promo_input').style.border = "2px solid #ff0000"
     }
-    else if (promocodes.indexOf(promoText) != -1) {
+    else if (promocodes.indexOf(promoText) != -1 && promoCounterClicks % 2 != 0) {
         document.querySelector('.promo_input').style.border = "2px solid #f0b643"
     }
-    if (promocodes.indexOf(promoText) != -1) {
+    if (promocodes.indexOf(promoText) != -1 && promoCounterClicks % 2 != 0) {
         if (promoText === 'Лето2021') {
             promocodeCoin.innerHTML = "100 руб"
         }
@@ -70,15 +93,22 @@ let getPromo = () => {
     else {
         promocodeCoin.innerHTML = "0 руб"
     }
+    if (promoText == "") {
+        promocodeCoin.innerHTML = "0 руб";
+        document.querySelector('.promo_input').style.border = ""
+    }
 }
 
 let pickupActive = (current) => {
     pickupCounterClicks++;
+    pickupBtn.style.background = "";
+    deliveryBtn.style.background = "";
     if (pickupCounterClicks % 2 != 0 && !deliveryBtn.classList.contains('btn_circle_active')) {
         makeActive(current);
         document.querySelector('.pickup_select').style.display = "block";
 
         deliveryCoin.innerHTML = "0 руб";
+        updateTotalCoin();
     }
     else {
         disActive(current);
@@ -87,34 +117,43 @@ let pickupActive = (current) => {
 }
 
 let deliveryActive = (current) => {
+    pickupBtn.style.background = "";
+    deliveryBtn.style.background = "";
     deliveryCounterClicks++;
     if (deliveryCounterClicks % 2 != 0 && !pickupBtn.classList.contains('btn_circle_active')) {
         makeActive(current);
         document.querySelector('.select-delivery_section').style.display = "flex";
 
         deliveryCoin.innerHTML = "300 руб";
+        updateTotalCoin();
     }
     else {
         disActive(current);
+        deliveryCoin.innerHTML = "";
         document.querySelector('.select-delivery_section').style.display = "";
     }
 }
 
 let makeActive = (current) => {
+    pickupBtn.style.background = "";
+    deliveryBtn.style.background = "";
+
     current.target.classList.add('btn_circle_active');
     current.target.classList.remove('btn_circle');
 }
 let disActive = (current) => {
+    pickupBtn.style.background = "";
+    deliveryBtn.style.background = "";
+
     current.target.classList.add('btn_circle');
     current.target.classList.remove('btn_circle_active');
 
     document.querySelector('.promo_input').style.border = "";
 
-    promocodeCoin.innerHTML = "";
-    deliveryCoin.innerHTML = "";
+    // promocodeCoin.innerHTML = ""
+    // deliveryCoin.innerHTML = "";
 }
 
-// circle.addEventListener("click", changeBtn);
 promoBtn.addEventListener("click", promoActive);
 pickupBtn.addEventListener("click", pickupActive);
 deliveryBtn.addEventListener("click", deliveryActive);
