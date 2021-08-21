@@ -161,7 +161,7 @@ window.addEventListener("scroll", () => {
 
         setInterval(() => {
             if (nextNewsArrow.style.display === '') {
-                console.log("News works")
+                // console.log("News works")
                 updateNewsSlidePosition();
             }
             else {
